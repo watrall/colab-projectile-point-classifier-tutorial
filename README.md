@@ -1,4 +1,4 @@
-# Projectile Point Classifier — Google Colab Edition (Beginner Friendly, Expanded Intros)
+# Projectile Point Classifier — Google Colab Edition (Beginner Friendly)
 
 In this tutorial, you’ll teach a computer to recognize different types of projectile points from photos. We’ll use **Google Colab** (a free tool that runs code in your browser) and **TensorFlow** (a toolbox for teaching computers to spot patterns in data).  
 
