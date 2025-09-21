@@ -30,6 +30,40 @@ More importantly, this tutorial is about making AI approachable. For many in arc
 - More images are always better. Large and varied datasets usually produce more accurate models, but even 50 images will let you complete this tutorial successfully.  
 - No installations required. Everything runs directly in the browser through Colab, and your files will be stored in Google Drive.  
 
+## Understanding Computer Vision
+
+At its core, computer vision is about teaching a computer to recognize patterns in images. It does not “understand” archaeology. Instead, it identifies statistical fingerprints such as edges, shapes, contours, colors, and textures that correlate with the labels you provide. For example, if you show it dozens of labeled Clovis points, it begins to notice what they have in common and how they differ from Dalton or Folsom points.
+
+A helpful analogy is training a graduate student. At first, they may not be able to tell two types apart. After studying many labeled examples, they start to notice features such as flute length, shoulder angle, or base shape. They do not have innate knowledge; they learn through exposure and feedback. A computer vision model works in the same way.
+
+This distinction is important for building confidence. The system is not “deciding” what an object is. It is calculating probabilities based on patterns it has seen. For example, a result like “Clovis (0.85)” means the model estimates there is an 85% chance the image matches the profile of a Clovis point. You, as the researcher, still hold interpretive authority to accept, question, or refine the result.
+
+Finally, performance depends heavily on the quality and diversity of your dataset. If your images vary in lighting, backgrounds, materials, and angles, the model becomes more robust. If your dataset only includes pristine catalog photographs, the model may struggle with field photos. The key is to use AI critically, treating it as a transparent assistant that you can test, evaluate, and trust.
+
+## Why TensorFlow in Colab
+
+When people hear about AI, they often think of it as a “black box” that is complicated or inaccessible. The good news is that TensorFlow, paired with Google Colab, makes machine learning transparent and approachable. Colab provides a free cloud-based notebook where you can write and run Python code in your browser. TensorFlow is the library that actually builds and trains the neural network.
+
+The key strength of TensorFlow is flexibility. It allows you to design and train a model from the ground up. Unlike pre-built services that may only recognize everyday objects like cars or coffee cups, TensorFlow lets you define your own categories such as Clovis, Dalton, or Folsom and train the model specifically on your dataset. This puts control in your hands as a researcher or educator.
+
+Colab complements TensorFlow by removing technical barriers. There is no need to install software or manage hardware. Everything runs in the cloud, and Google even provides free GPU acceleration to make training faster. Together, Colab and TensorFlow give you the power to experiment with machine learning in a way that is beginner-friendly but still powerful enough for research and teaching.
+
+Most importantly, TensorFlow in Colab supports openness and transparency. You can see the exact code that trains your model, examine performance metrics like accuracy and loss, and refine your dataset step by step. This openness makes it easier to think of AI as a scientific tool that you can evaluate and critique, rather than a mysterious system that produces unquestionable results.
+
+## Understanding Bias in Machine Learning
+
+Like any tool, machine learning is shaped by the data it is trained on. If the dataset is unbalanced or limited, the model will reflect those limitations. This is what we mean when we talk about bias in machine learning.
+
+There are two main types of bias to keep in mind:
+
+- **Dataset bias**: If you include many images of Dalton points but only a handful of Clovis points, the model will get much better at recognizing Daltons than Clovis. The system learns what you show it.  
+- **Model bias**: TensorFlow models are built on general training techniques that were originally optimized on large image datasets. This background influences which visual patterns the model finds easier to learn.
+
+Being aware of bias is important because it helps you interpret results critically. A model’s prediction is not a statement of fact. It is a reflection of patterns in the data it has seen. By evaluating your model’s performance and adjusting your dataset, you can reduce bias and make the results more reliable.
+
+**Note**: In archaeology and heritage work, bias also intersects with ethics. Collections often reflect colonial histories, selective preservation, or curatorial choices. Always approach training data with transparency and responsibility, and avoid presenting the output of an AI model as objective truth.
+
+
 
 
 ## Step 1 — Connect Google Drive and Upload Your Dataset
