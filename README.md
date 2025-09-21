@@ -105,14 +105,7 @@ print("Training/Validation counts:", count_images(DATA_DIR))
 print("Held-out test counts:", count_images(TEST_DIR))
 ```
 
----
 
-(… The same pattern continues for Steps 3–12, Troubleshooting, and Next steps, each with expanded conversational intros …)
-
----
-
-
----
 
 ## Running This Tutorial *Locally* (Optional, Beginner Friendly)
 
