@@ -47,7 +47,7 @@ More importantly, this tutorial is about making AI approachable. For many in arc
 
 - Organize a dataset of projectile point images into training, validation, and test sets.  
 - Load and prepare image data in Google Colab using TensorFlow.  
-- Build a convolutional neural network (CNN) for image classification.  
+- Build a convolutional neural network (CNN) — a model designed to recognize patterns in images — for image classification. 
 - Train the model and track its progress across multiple epochs.  
 - Visualize accuracy and loss to understand how well the model is learning.  
 - Evaluate performance on a held-out test set for honest results.  
@@ -69,9 +69,7 @@ More importantly, this tutorial is about making AI approachable. For many in arc
 
 At its core, computer vision is about teaching a computer to recognize patterns in images. It does not “understand” archaeology. Instead, it identifies statistical fingerprints such as edges, shapes, contours, colors, and textures that correlate with the labels you provide. For example, if you show it dozens of labeled Clovis points, it begins to notice what they have in common and how they differ from Dalton or Folsom points.
 
-A helpful analogy is training a graduate student. At first, they may not be able to tell two types apart. After studying many labeled examples, they start to notice features such as flute length, shoulder angle, or base shape. They do not have innate knowledge; they learn through exposure and feedback. A computer vision model works in the same way.
-
-This distinction is important for building confidence. The system is not “deciding” what an object is. It is calculating probabilities based on patterns it has seen. For example, a result like “Clovis (0.85)” means the model estimates there is an 85% chance the image matches the profile of a Clovis point. You, as the researcher, still hold interpretive authority to accept, question, or refine the result.
+A helpful analogy is training a  student. At first, they may not be able to tell two types apart. After studying many labeled examples, they start to notice features such as flute length, shoulder angle, or base shape. They do not have innate knowledge; they learn through exposure and feedback. A computer vision model works in the same way, but it learns from mathematical patterns. Internally, a CNN learns to detect a hierarchy of features. The first layers might learn simple things like edges, lines, and curves. Later layers combine these to recognize more complex shapes, like a rounded base or a sharp shoulder. Finally, the last layers use these high-level shapes to classify the object as a "Clovis" or "Dalton" point. This distinction is important for building confidence. The system is not “deciding” what an object is. It is calculating probabilities based on patterns it has seen. For example, a result like “Clovis (0.85)” means the model estimates there is an 85% chance the image matches the profile of a Clovis point. You, as the researcher, still hold interpretive authority to accept, question, or refine the result.
 
 Finally, performance depends heavily on the quality and diversity of your dataset. If your images vary in lighting, backgrounds, materials, and angles, the model becomes more robust. If your dataset only includes pristine catalog photographs, the model may struggle with field photos. The key is to use AI critically, treating it as a transparent assistant that you can test, evaluate, and trust.
 
@@ -140,7 +138,7 @@ Let’s tell Colab where to find your dataset. Your images should be organized b
 
 We’ll also count how many images are in each class folder. This helps catch issues early — like if you forgot to upload something or if a folder is empty.
 
-📝 **Note**: A quick check like this is often called a **sanity check** — it’s just making sure things look normal before training.
+**Note**: A quick check like this is often called a **sanity check** — it’s just making sure things look normal before training.
 
 ```python
 import os, glob
@@ -172,7 +170,7 @@ Now we’ll load the images and turn them into something TensorFlow understands.
 
 We’ll also split the images into **training** and **validation** groups. Training images help the model learn; validation images help us measure how well it's learning (without bias).
 
-📝 **Note**: The **validation set** is a portion of data set aside to check the model’s performance during training. It’s never used to teach the model — just to test it as it learns.
+**Note**: The **validation set** is a portion of data set aside to check the model’s performance during training. It’s never used to teach the model — just to test it as it learns.
 
 ```python
 import tensorflow as tf
@@ -203,7 +201,7 @@ Images are made of pixel values ranging from 0 to 255. Neural networks work bett
 
 We’ll also add caching and prefetching. These speed up training by making sure the next batch of images is always ready when the model needs it.
 
-📝 **Note**:
+**Note**:
 - **Normalization** = Scaling values to a standard range, often 0 to 1.
 - **Prefetching** = Loading data ahead of time so it’s ready when needed.
 - **Caching** = Storing data in memory so it doesn’t have to be reprocessed repeatedly.
@@ -220,13 +218,13 @@ val_ds = prep(val_ds)
 
 ## Step 5 — Set Up the Model Using Transfer Learning
 
-Instead of training a model from scratch (which takes tons of data and time), we’ll use a pre-trained model called **MobileNetV2**. It was trained on millions of images and knows how to recognize general features like edges, shapes, and textures.
+Instead of training a model from scratch (which takes tons of data and time), we’ll use a pre-trained model called MobileNetV2. It was trained on millions of images from the ImageNet dataset and knows how to recognize general features like edges, shapes, and textures. MobileNetV2 is a good choice for this tutorial because it is computationally efficient and relatively small, making it ideal for running quickly in a Colab environment or on mobile devices. It achieves this efficiency using a specific architecture called inverted residuals with linear bottlenecks.
 
-We’ll use it as the “backbone” of our model and then add a few new layers on top that are specific to our projectile point types. This approach is called **transfer learning** — and it's a powerful shortcut.
+We’ll use it as the “backbone” of our model and then add a few new layers on top that are specific to our projectile point types. This approach is called transfer learning — and it's a powerful shortcut. We will "freeze" the original layers so they don't change during training, preserving the knowledge they've already learned.
 
 **Note**:
-- **Transfer Learning** = Reusing a model trained on one task to jump-start learning on a new task.
-- **Frozen layers** = Parts of the model that won’t be updated during training.
+- **Transfer Learning** = Reusing a model trained on one task (like ImageNet classification) to jump-start learning on a new task (our projectile point classification). This saves time and requires less data.
+- **Frozen layers** = Parts of the model that won’t be updated during training. This is a common practice in transfer learning to retain the general features learned by the pre-trained model.
 
 ```python
 base_model = tf.keras.applications.MobileNetV2(
@@ -382,7 +380,7 @@ print("Model saved to:", save_path)
 
 Let’s load the model back and test that it works.
 
-📝 **Note**:
+**Note**:
 - **Deserialization** = Loading a model file and turning it back into a usable model in your code.
 
 ```python
