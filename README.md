@@ -34,7 +34,7 @@
 9. [Contributing to this Tutorial](#contributing-to-this-tutorial) — PRs, forks, and review expectations  
 10. [Citation](#citation) — use `CITATION.cff` for APA/BibTeX
 
-
+## Tutorial Overview
 This tutorial will guide you through building a machine learning classifier for North American projectile points using Python and TensorFlow, all inside Google Colab. By the end, you will have a fully trained and testable image classification model that runs in your browser with no installation required. You will be able to upload a new image of a projectile point and receive a prediction of its type (for example, “Clovis” or “Dalton”), along with a confidence score.
 
 Why is this useful? Archaeologists, museum professionals, and students often work with large collections of projectile points, and identifying or labeling them can be time-consuming. A classifier does not replace expert judgment, but it can assist in organizing data, exploring typological comparisons, or helping students learn through hands-on experience with real datasets. Because everything runs in Google Colab (a free, cloud-based notebook environment), there is no need to install software or configure complex environments. You simply follow the steps, run the code, and see the results.
