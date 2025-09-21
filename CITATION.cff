@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this tutorial, please cite it as below."
-title: "Projectile Point Classifier — Google Colab Edition (Beginner Friendly, Expanded Intros)"
+title: "Projectile Point Classifier — Google Colab Edition (Beginner Friendly)"
 authors:
   - family-names: "YourLastName"
     given-names: "YourFirstName"
