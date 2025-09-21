@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this tutorial, please cite it as below."
+title: "Projectile Point Classifier — Google Colab Edition (Beginner Friendly, Expanded Intros)"
+authors:
+  - family-names: "YourLastName"
+    given-names: "YourFirstName"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+version: "2.0.0"
+date-released: "2025-01-01"
+url: "https://github.com/your-org/your-repo"
+repository-code: "https://github.com/your-org/your-repo"
+license: "CC-BY-4.0"
+type: "documentation"
+keywords:
+  - "computer vision"
+  - "machine learning"
+  - "transfer learning"
+  - "TensorFlow"
+  - "heritage"
+  - "archaeology"
+  - "projectile points"

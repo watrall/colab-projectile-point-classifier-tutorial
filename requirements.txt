@@ -1,0 +1,17 @@
+# Core ML library
+tensorflow>=2.12
+
+# For building the demo interface
+gradio==4.44.0
+
+# For evaluation metrics and confusion matrix
+scikit-learn
+
+# For plotting evaluation results
+matplotlib
+
+# For image loading and processing
+pillow
+
+# For handling paths and file structures
+pathlib
