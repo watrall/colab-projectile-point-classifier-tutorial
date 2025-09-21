@@ -1,8 +1,12 @@
 # Projectile Point Image Classifier (Beginner Tutorial)
 
-This tutorial walks you step-by-step through building an image classifier that identifies types of projectile points (Clovis, Folsom, etc.) using Python and TensorFlow — all within Google Colab.
+This tutorial will guide you through building a machine learning classifier for North American projectile points using Python and TensorFlow, all inside Google Colab. By the end, you will have a fully trained and testable image classification model that runs in your browser with no installation required. You will be able to upload a new image of a projectile point and receive a prediction of its type (for example, “Clovis” or “Dalton”), along with a confidence score.
 
-You don’t need any prior coding or machine learning experience. The tutorial explains what each step does, why it matters, and how to validate that it’s working.
+Why is this useful? Archaeologists, museum professionals, and students often work with large collections of projectile points, and identifying or labeling them can be time-consuming. A classifier does not replace expert judgment, but it can assist in organizing data, exploring typological comparisons, or helping students learn through hands-on experience with real datasets. Because everything runs in Google Colab (a free, cloud-based notebook environment), there is no need to install software or configure complex environments. You simply follow the steps, run the code, and see the results.
+
+More importantly, this tutorial is about making AI approachable. For many in archaeology and heritage fields, machine learning can feel overly technical or inaccessible. This guide is designed to make the process clear, transparent, and beginner-friendly. You will see how the model learns, where it performs well, and where it might need improvement. The goal is not just to build a working classifier, but to help you understand what is happening behind the scenes so you can use these tools critically and confidently in your own research or teaching.
+
+> **Note**: While this tutorial focuses on projectile points, the same workflow can be used to classify many other types of archaeological or heritage objects. For example, you could train a model to recognize decorated ceramics, identify other lithic tool types, distinguish colonial pipe stems, or sort beads by material or period. The approach is flexible and can be adapted to any object type as long as you have labeled images that reflect the variation you want the model to learn.
 
 ## Step 1 — Connect Google Drive and Upload Your Dataset
 
