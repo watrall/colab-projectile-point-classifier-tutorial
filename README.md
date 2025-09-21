@@ -1,5 +1,40 @@
 # Projectile Point Image Classifier (Beginner Tutorial)
 
+### Table of Contents
+
+1. [What You’ll Learn](#what-youll-learn) — skills, outcomes, and metrics you’ll understand  
+2. [What You’ll Need](#what-youll-need) — accounts, images, and setup expectations  
+3. [Understanding Computer Vision](#understanding-computer-vision) — how models “see” and why probabilities matter  
+4. [Why TensorFlow in Colab](#why-tensorflow-in-colab) — openness, GPUs, and researcher control  
+5. [Understanding Bias in Machine Learning](#understanding-bias-in-machine-learning) — dataset vs. model bias and archaeological context  
+6. [Ethics, Rights, Permissions, and Cultural Property](#ethics-rights-permissions-and-cultural-property) — stewardship, sensitivity, and transparency  
+   - [Responsible Sharing](#responsible-sharing) — documenting limits and avoiding harm  
+7. **Hands-On Build (Colab)**
+   1. [Step 1 — Connect Google Drive and Upload Your Dataset](#step-1--connect-google-drive-and-upload-your-dataset) — mount Drive; train/val/test layout  
+   2. [Step 2 — Set Up Paths and Check Your Images](#step-2--set-up-paths-and-check-your-images) — define paths; sanity-check class counts  
+   3. [Step 3 — Create Our Image Dataset](#step-3--create-our-image-dataset) — load folders; split train/validation  
+   4. [Step 4 — Normalize and Prepare the Data](#step-4--normalize-and-prepare-the-data) — scale pixels; cache/prefetch  
+   5. [Step 5 — Set Up the Model Using Transfer Learning](#step-5--set-up-the-model-using-transfer-learning) — MobileNetV2 backbone; custom head  
+   6. [Step 6 — Compile the Model](#step-6--compile-the-model) — loss, optimizer, metrics  
+   7. [Step 7 — Train the Model](#step-7--train-the-model) — epochs and validation tracking  
+   8. [Step 8 — Visualize Model Performance](#step-8--visualize-model-performance) — accuracy/loss plots; over/underfitting signals  
+   9. [Step 9 — Evaluate on Held-Out Test Set](#step-9--evaluate-on-held-out-test-set) — honest final metrics  
+   10. [Step 10 — Build an Interactive App with Gradio](#step-10--build-an-interactive-app-with-gradio) — upload an image; see top predictions  
+   11. [Step 11 — Save the Trained Model](#step-11--save-the-trained-model) — persist to `.keras`  
+   12. [Step 12 — Load a Saved Model and Use It](#step-12--load-a-saved-model-and-use-it) — reload and run a quick prediction  
+8. [Running This Tutorial *Locally* (Optional, Beginner Friendly)](#running-this-tutorial-locally-optional-beginner-friendly) — step-by-step local setup  
+   - [Step A — Check you have Python](#step-a--check-you-have-python)  
+   - [Step B — Create a project folder and move into it](#step-b--create-a-project-folder-and-move-into-it)  
+   - [Step C — Create a virtual environment](#step-c--create-a-virtual-environment)  
+   - [Step D — Get the files into this folder](#step-d--get-the-files-into-this-folder)  
+   - [Step E — Install the requirements](#step-e--install-the-requirements)  
+   - [Step F — Open and run the notebook](#step-f--open-and-run-the-notebook)  
+   - [Step G — GPU or no GPU?](#step-g--gpu-or-no-gpu)  
+   - [Common questions (and answers)](#common-questions-and-answers)  
+9. [Contributing to this Tutorial](#contributing-to-this-tutorial) — PRs, forks, and review expectations  
+10. [Citation](#citation) — use `CITATION.cff` for APA/BibTeX
+
+
 This tutorial will guide you through building a machine learning classifier for North American projectile points using Python and TensorFlow, all inside Google Colab. By the end, you will have a fully trained and testable image classification model that runs in your browser with no installation required. You will be able to upload a new image of a projectile point and receive a prediction of its type (for example, “Clovis” or “Dalton”), along with a confidence score.
 
 Why is this useful? Archaeologists, museum professionals, and students often work with large collections of projectile points, and identifying or labeling them can be time-consuming. A classifier does not replace expert judgment, but it can assist in organizing data, exploring typological comparisons, or helping students learn through hands-on experience with real datasets. Because everything runs in Google Colab (a free, cloud-based notebook environment), there is no need to install software or configure complex environments. You simply follow the steps, run the code, and see the results.
@@ -760,4 +795,19 @@ A: Yes. TensorFlow is a big library. As long as the install completes and your i
 **Q: I got an “Out of Memory” error.**  
 A: Try lowering the batch size in the notebook (e.g., `BATCH = 16`), close other heavy apps, or run in Colab where GPUs are available.
 
----
+# Contributing to this Tutorial
+
+We welcome improvements. If you want to tweak the tutorial, fix bugs, or add examples:
+
+1. Fork this repository.  
+2. Clone your fork (or open in GitHub Codespaces).  
+3. Make your changes: README, examples, code.  
+4. Commit and push to your fork.  
+5. Open a Pull Request back to this repo — explain what changed and why.  
+
+
+
+# Citation
+
+If you use or adapt this tutorial, please cite the repository. Include the provided `CITATION.cff` so GitHub can generate APA/BibTeX automatically (look for “Cite this repository” on the repo page).  
+
