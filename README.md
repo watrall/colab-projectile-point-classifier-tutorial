@@ -63,6 +63,28 @@ Being aware of bias is important because it helps you interpret results critical
 
 **Note**: In archaeology and heritage work, bias also intersects with ethics. Collections often reflect colonial histories, selective preservation, or curatorial choices. Always approach training data with transparency and responsibility, and avoid presenting the output of an AI model as objective truth.
 
+## Ethics, Rights, Permissions, and Cultural Property
+
+When working with museum collections and archaeological records, it is important to remember that data is never “just data.” These are records of objects, histories, and in some cases, living cultural knowledge.
+
+- **Copyright and permissions**: Make sure you have the right to use the images you are training your model on.  
+- **Cultural patrimony**: Many artifacts in museums are part of the cultural patrimony of descendant or source communities. Treat them with respect and, where appropriate, consultation.  
+- **Colonial histories**: Be transparent about the colonial contexts that shaped many collections.  
+- **Privacy and sensitivity**: Be cautious about including site locations, collector names, or donor histories.  
+- **Bias and framing**: Remember that typologies are scholarly constructs, not objective truths.  
+
+This tutorial is designed as a teaching and research tool. It should be used responsibly, in collaboration with institutions and communities, and never as a substitute for expertise, consultation, or ethical stewardship.
+
+### Responsible Sharing
+
+Once you have built a working classifier, think carefully about how you share it. Transparency prevents misuse and builds trust among scholars, institutions, and communities.  
+
+- Clearly describe the size, sources, and limitations of your dataset.  
+- State that the classifier is an educational and research tool, not a replacement for expert analysis.  
+- Avoid uploading sensitive images or sharing site-specific information that could put collections or heritage at risk.  
+- Document the scope of your model so users understand what it can and cannot do.  
+
+By being upfront about these limitations and responsibilities, you help ensure that machine learning is used as a constructive and ethical assistant in archaeology and heritage research.
 
 
 
