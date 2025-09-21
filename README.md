@@ -20,6 +20,17 @@ More importantly, this tutorial is about making AI approachable. For many in arc
 - Save and reload your trained model for future use.  
 - Develop confidence in reading ML metrics like accuracy, loss, overfitting, and underfitting.  
 
+## What You’ll Need
+
+- A Google account (required for using Google Colab and Google Drive).  
+- Access to Google Colab (free to use in your browser with a Google account).  
+- A small set of rights-cleared projectile point images (start with around 50 images).  
+- Image quality matters. Clear, well-lit, in-focus images make it easier for the model to learn distinguishing patterns such as fluting, base shape, or shoulder angles.  
+- Include variation: different lighting, backgrounds, and orientations. A model trained only on clean catalog shots may struggle with field photos.  
+- More images are always better. Large and varied datasets usually produce more accurate models, but even 50 images will let you complete this tutorial successfully.  
+- No installations required. Everything runs directly in the browser through Colab, and your files will be stored in Google Drive.  
+
+
 
 ## Step 1 — Connect Google Drive and Upload Your Dataset
 
