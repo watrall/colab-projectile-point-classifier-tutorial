@@ -8,6 +8,19 @@ More importantly, this tutorial is about making AI approachable. For many in arc
 
 > **Note**: While this tutorial focuses on projectile points, the same workflow can be used to classify many other types of archaeological or heritage objects. For example, you could train a model to recognize decorated ceramics, identify other lithic tool types, distinguish colonial pipe stems, or sort beads by material or period. The approach is flexible and can be adapted to any object type as long as you have labeled images that reflect the variation you want the model to learn.
 
+## What You’ll Learn
+
+- Organize a dataset of projectile point images into training, validation, and test sets.  
+- Load and prepare image data in Google Colab using TensorFlow.  
+- Build a convolutional neural network (CNN) for image classification.  
+- Train the model and track its progress across multiple epochs.  
+- Visualize accuracy and loss to understand how well the model is learning.  
+- Evaluate performance on a held-out test set for honest results.  
+- Create a simple interactive demo with Gradio to test the model in your browser.  
+- Save and reload your trained model for future use.  
+- Develop confidence in reading ML metrics like accuracy, loss, overfitting, and underfitting.  
+
+
 ## Step 1 — Connect Google Drive and Upload Your Dataset
 
 We’ll start by mounting your Google Drive so the notebook can access your image dataset. Make sure your projectile point images are stored in labeled folders — one folder per type (e.g., `clovis`, `folsom`, `dalton`).
